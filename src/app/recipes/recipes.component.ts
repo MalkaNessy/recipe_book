@@ -1,3 +1,4 @@
+import { Recipe } from './recipe.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recipes.component.css']
 })
 export class RecipesComponent implements OnInit {
+  detailsData: Recipe;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  setRecipeDetails(selectedRecipe: Recipe) {
+    this.detailsData = selectedRecipe;
   }
 
 }

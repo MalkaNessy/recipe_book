@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  activeNavigation = `recipe`;
+
+  onNavigationChanged(navName: string) {
+    this.activeNavigation = navName;
+  }
 }
